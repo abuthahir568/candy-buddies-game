@@ -1,6 +1,6 @@
 {
   "name": "Candy Buddies",
-  "description": "A match-3 puzzle game featuring delicious candies, boosters, obstacles, and adorable dessert buddies.",
+  "description": "A match-3 puzzle game featuring 600 delicious levels, boosters, obstacles, and adorable dessert buddies.",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }

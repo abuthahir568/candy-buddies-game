@@ -201,67 +201,199 @@ button {
   box-shadow: 0 2px 6px rgba(0,0,0,0.2);
 }
 
-/* Main Menu */
+/* Main Menu - Clean Classic Normal Theme (No animations, no animals) */
 #main-menu {
-  justify-content: space-around;
-  text-align: center;
-}
-.logo-wrap {
-  margin-top: 20px;
-}
-.game-title {
-  font-size: 2.8rem;
-  font-weight: 900;
-  background: linear-gradient(180deg, #ff0055 0%, #ff5400 50%, #ffbd00 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  filter: drop-shadow(0 4px 8px rgba(255, 77, 109, 0.45));
-  letter-spacing: 1px;
-}
-.game-subtitle {
-  font-size: 1.05rem;
-  color: #7209b7;
-  font-weight: 700;
-  margin-top: -4px;
-  text-shadow: 0 1px 1px white;
-}
-.hero-buddy-wrap {
-  width: 170px;
-  height: 170px;
-  margin: 10px auto;
+  background: linear-gradient(180deg, #38bdf8 0%, #0284c7 60%, #0369a1 100%);
+  justify-content: space-between;
+  align-items: center;
+  padding: env(safe-area-inset-top, 14px) 16px env(safe-area-inset-bottom, 16px);
   position: relative;
-  animation: bounce 2.4s ease-in-out infinite;
+  overflow: hidden;
 }
-.hero-buddy-svg {
-  width: 100%;
-  height: 100%;
-  filter: drop-shadow(0 10px 18px rgba(0,0,0,0.2));
-}
-.menu-buttons {
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-  width: 100%;
-  max-width: 260px;
-}
+
+/* Normal Top Menu Bar */
 .menu-top-bar {
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 4px 10px;
+  padding: 6px 4px;
 }
 .coin-badge {
-  background: rgba(255, 255, 255, 0.95);
+  background: #ffffff;
   padding: 6px 14px;
   border-radius: 999px;
   font-weight: 800;
-  color: #d48b00;
+  color: #b45309;
   display: flex;
   align-items: center;
   gap: 6px;
-  box-shadow: 0 3px 8px rgba(0,0,0,0.12);
-  border: 2px solid #ffd166;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  border: 1.5px solid #fde047;
+}
+.lives-pill {
+  background: #ffffff;
+  padding: 6px 12px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  border: 1.5px solid #fecdd3;
+  cursor: pointer;
+}
+.lives-pill:active {
+  transform: scale(0.96);
+}
+
+/* Title Banner */
+.stone-title-banner-container {
+  width: 100%;
+  max-width: 340px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 14px;
+}
+.stone-title-banner {
+  width: 100%;
+  background: linear-gradient(180deg, #f8fafc 0%, #e2e8f0 40%, #cbd5e1 100%);
+  border: 3.5px solid #475569;
+  border-radius: 20px;
+  box-shadow: 0 6px 0 #1e293b, 0 10px 18px rgba(0,0,0,0.22);
+  padding: 10px 14px;
+  text-align: center;
+}
+.stone-title-text {
+  font-size: 1.85rem;
+  font-weight: 900;
+  color: #ffffff;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-shadow: 0 3px 0 #475569, 0 4px 8px rgba(0, 0, 0, 0.4);
+  display: block;
+  line-height: 1.1;
+}
+.stone-title-sub {
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: #334155;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-top: 2px;
+  display: block;
+}
+
+/* 4 Stone Action Buttons */
+.stone-menu-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  max-width: 290px;
+  margin: 16px 0;
+}
+.stone-btn {
+  width: 100%;
+  padding: 14px 10px;
+  background: linear-gradient(180deg, #ffffff 0%, #f1f5f9 25%, #e2e8f0 65%, #cbd5e1 100%);
+  border: 3px solid #475569;
+  border-radius: 18px;
+  box-shadow: 0 6px 0 #1e293b, 0 8px 14px rgba(0, 0, 0, 0.22);
+  color: #ffffff;
+  font-size: 1.5rem;
+  font-weight: 900;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-shadow: 0 2px 0 #475569, 0 3px 6px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.08s ease, box-shadow 0.08s ease;
+}
+.stone-btn:hover {
+  filter: brightness(1.04);
+}
+.stone-btn:active {
+  transform: translateY(4px);
+  box-shadow: 0 2px 0 #1e293b, 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Bottom Heart & Life Bar */
+.bottom-energy-bar-wrap {
+  width: 92%;
+  max-width: 350px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+  cursor: pointer;
+}
+.bottom-energy-bar-wrap:active {
+  transform: scale(0.98);
+}
+.stone-heart-emblem {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: linear-gradient(180deg, #f8fafc 0%, #e2e8f0 100%);
+  border: 3px solid #475569;
+  box-shadow: 0 4px 0 #1e293b, 0 6px 12px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.stone-heart-emblem svg {
+  width: 28px;
+  height: 28px;
+}
+.energy-track {
+  flex: 1;
+  height: 32px;
+  background: linear-gradient(180deg, #94a3b8 0%, #475569 100%);
+  border: 3px solid #334155;
+  border-radius: 999px;
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.35), 0 3px 0 #1e293b;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  padding: 3px;
+}
+.energy-fill {
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(180deg, #ff4d6d 0%, #e53935 50%, #c62828 100%);
+  border-radius: 999px;
+  box-shadow: inset 0 1px 2px rgba(255,255,255,0.6);
+  transition: width 0.3s ease;
+}
+.energy-segments {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  pointer-events: none;
+}
+.energy-segment-line {
+  width: 2px;
+  height: 100%;
+  background: rgba(30, 41, 59, 0.6);
+}
+.energy-label {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  font-size: 0.8rem;
+  font-weight: 900;
+  color: white;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.9);
+  pointer-events: none;
 }
 
 /* Level Map Screen */
@@ -270,14 +402,95 @@ button {
 }
 .map-header {
   width: 100%;
-  padding: 14px 16px;
-  background: rgba(255, 255, 255, 0.92);
+  padding: 10px 14px;
+  background: rgba(255, 255, 255, 0.94);
   backdrop-filter: blur(8px);
   display: flex;
   align-items: center;
   justify-content: space-between;
   box-shadow: 0 4px 14px rgba(0,0,0,0.08);
   z-index: 20;
+}
+.chapter-nav-bar {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  z-index: 15;
+  gap: 8px;
+}
+.chapter-nav-btn {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: #ff4d6d;
+  color: white;
+  font-weight: 900;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.18);
+  cursor: pointer;
+  transition: transform 0.1s, background 0.15s;
+}
+.chapter-nav-btn:active {
+  transform: scale(0.92);
+}
+.chapter-nav-btn:disabled {
+  background: #cbd5e1;
+  color: #94a3b8;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+.chapter-info-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  text-align: center;
+}
+.chapter-name {
+  font-size: 0.92rem;
+  font-weight: 900;
+  color: #ff0054;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 180px;
+}
+.chapter-sub {
+  font-size: 0.72rem;
+  font-weight: 800;
+  color: #7209b7;
+}
+.chapter-portal-node {
+  margin: 16px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.chapter-portal-btn {
+  background: linear-gradient(135deg, #7209b7, #3a0ca3);
+  color: #fff;
+  font-weight: 800;
+  font-size: 0.85rem;
+  padding: 8px 18px;
+  border-radius: 999px;
+  box-shadow: 0 4px 10px rgba(114, 9, 183, 0.35);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  border: 2px solid #fff;
+  transition: transform 0.1s;
+}
+.chapter-portal-btn:active {
+  transform: scale(0.94);
 }
 .map-scroll-area {
   flex: 1;
@@ -846,49 +1059,60 @@ button {
 
   <!-- ==================== MAIN MENU SCREEN ==================== -->
   <div id="main-menu" class="screen active">
+    <!-- Normal Top Menu Bar -->
     <div class="menu-top-bar">
-      <div class="coin-badge">
-        <svg width="20" height="20" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="#ffd166"/><circle cx="12" cy="12" r="7" fill="#ffb703"/><text x="12" y="16" font-size="11" font-weight="900" fill="#7a4400" text-anchor="middle">¢</text></svg>
-        <span id="menu-coin-count">100</span>
+      <div style="display:flex; gap:10px; align-items:center;">
+        <div class="coin-badge">
+          <svg width="20" height="20" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="#ffd166"/><circle cx="12" cy="12" r="7" fill="#ffb703"/><text x="12" y="16" font-size="11" font-weight="900" fill="#7a4400" text-anchor="middle">¢</text></svg>
+          <span id="menu-coin-count">100</span>
+        </div>
+        <div class="lives-pill" id="lives-pill" title="Current Lives">
+          <span style="font-size:14px;">❤️</span>
+          <span id="menu-lives-count" style="font-weight:900; color:#37474f; font-size:13px;">5/5</span>
+        </div>
       </div>
-      <div style="display:flex; gap:8px;">
+      <div style="display:flex; gap:10px; align-items:center;">
         <button class="btn-circle" id="daily-reward-btn" title="Daily Gift">
-          <svg width="26" height="26" viewBox="0 0 24 24"><rect x="3" y="8" width="18" height="13" rx="2" fill="#ff4d6d"/><path d="M12 8v13M3 13h18" stroke="#fff" stroke-width="2"/><path d="M12 8C10 5 6 5 6 7c0 2 6 1 6 1s6 1 6-1c0-2-4-2-6 1z" fill="#ffd166"/></svg>
+          <svg width="22" height="22" viewBox="0 0 24 24"><rect x="3" y="8" width="18" height="13" rx="2" fill="#ff4d6d"/><path d="M12 8v13M3 13h18" stroke="#fff" stroke-width="2"/><path d="M12 8C10 5 6 5 6 7c0 2 6 1 6 1s6 1 6-1c0-2-4-2-6 1z" fill="#ffd166"/></svg>
         </button>
         <button class="btn-circle" id="menu-settings-btn" title="Settings">
-          <svg width="24" height="24" viewBox="0 0 24 24"><path d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58a.49.49 0 0 0 .12-.61l-1.92-3.32a.49.49 0 0 0-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54a.48.48 0 0 0-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96a.49.49 0 0 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.09.63-.09.94s.02.64.07.94l-2.03 1.58a.49.49 0 0 0-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.01-1.58zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6z" fill="#7209b7"/></svg>
+          <svg width="22" height="22" viewBox="0 0 24 24"><path d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58a.49.49 0 0 0 .12-.61l-1.92-3.32a.49.49 0 0 0-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54a.48.48 0 0 0-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96a.49.49 0 0 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.09.63-.09.94s.02.64.07.94l-2.03 1.58a.49.49 0 0 0-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.01-1.58zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6z" fill="#7209b7"/></svg>
         </button>
       </div>
     </div>
 
-    <div class="logo-wrap">
-      <h1 class="game-title">Candy Buddies</h1>
-      <p class="game-subtitle">Sweet Match-3 Adventure</p>
-    </div>
-
-    <div class="hero-buddy-wrap" id="menu-hero-buddy">
-      <!-- Injected Buddy SVG -->
-    </div>
-
-    <div>
-      <div style="font-weight: 800; color: #7209b7; margin-bottom: 6px; font-size: 0.85rem;">CHOOSE YOUR COMPANION</div>
-      <div class="buddies-row" id="buddy-picker">
-        <!-- 5 buddy buttons -->
+    <!-- Title Banner -->
+    <div class="stone-title-banner-container">
+      <div class="stone-title-banner">
+        <span class="stone-title-text">CANDY BUDDIES</span>
+        <span class="stone-title-sub">Match-3 Puzzle</span>
       </div>
     </div>
 
-    <div class="menu-buttons">
-      <button class="btn btn-yellow" id="play-button">
-        <svg width="24" height="24" viewBox="0 0 24 24"><polygon points="6,3 20,12 6,21" fill="currentColor"/></svg>
-        PLAY
-      </button>
-      <button class="btn btn-blue" id="leaderboard-button">
-        <svg width="22" height="22" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm6 12H6v-1.4c0-2 4-3.1 6-3.1s6 1.1 6 3.1V18z" fill="#fff"/></svg>
-        RANKINGS
-      </button>
+    <!-- 4 Action Buttons -->
+    <div class="stone-menu-buttons">
+      <button class="stone-btn" id="btn-menu-start">START</button>
+      <button class="stone-btn" id="btn-menu-practice">PRACTICE</button>
+      <button class="stone-btn" id="btn-menu-challenge">CHALLENGE</button>
+      <button class="stone-btn" id="btn-menu-compete">COMPETE</button>
     </div>
 
-    <div style="font-size:0.8rem; color:#6a004f; font-weight:700;">30 Sweet Levels • Offline Play</div>
+    <!-- Bottom Energy Heart & Life Bar -->
+    <div class="bottom-energy-bar-wrap" id="bottom-lives-wrap" title="Lives Bar">
+      <div class="stone-heart-emblem">
+        <svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" fill="#ff1744" stroke="#fff" stroke-width="1.2"/></svg>
+      </div>
+      <div class="energy-track">
+        <div class="energy-fill" id="energy-fill"></div>
+        <div class="energy-segments">
+          <span class="energy-segment-line"></span>
+          <span class="energy-segment-line"></span>
+          <span class="energy-segment-line"></span>
+          <span class="energy-segment-line"></span>
+        </div>
+        <span class="energy-label" id="energy-label">5 / 5 LIVES</span>
+      </div>
+    </div>
   </div>
 
   <!-- ==================== LEVEL MAP SCREEN ==================== -->
@@ -897,15 +1121,31 @@ button {
       <button class="btn-circle" id="map-back-btn">
         <svg width="24" height="24" viewBox="0 0 24 24"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z" fill="#ff0054"/></svg>
       </button>
-      <div style="font-size: 1.3rem; font-weight: 900; color: #ff0054;">Level Map</div>
+      <div style="display:flex; flex-direction:column; align-items:center;">
+        <div style="font-size: 1.25rem; font-weight: 900; color: #ff0054;">Level Map</div>
+        <div id="map-total-stars" style="font-size: 0.75rem; font-weight: 800; color: #d48b00;">⭐ 0 / 1800</div>
+      </div>
       <div class="coin-badge">
         <span id="map-coin-count">100</span> ¢
       </div>
     </div>
 
+    <!-- Chapter Navigation -->
+    <div class="chapter-nav-bar">
+      <button class="chapter-nav-btn" id="map-prev-chapter-btn" title="Previous Chapter">◀</button>
+      <div class="chapter-info-wrap">
+        <span class="chapter-name" id="map-chapter-name">Chapter 1: Strawberry Meadow</span>
+        <span class="chapter-sub" id="map-chapter-range">Levels 1 - 20</span>
+      </div>
+      <button class="chapter-nav-btn" id="map-next-chapter-btn" title="Next Chapter">▶</button>
+      <button class="btn btn-yellow" id="map-jump-btn" style="padding:6px 12px; font-size:0.75rem; border-radius:12px; box-shadow:0 3px 0 #fb8500;">
+        My Level
+      </button>
+    </div>
+
     <div class="map-scroll-area" id="map-scroll-area">
       <svg class="map-path-svg" id="map-path-svg"></svg>
-      <!-- 30 level nodes created by JS -->
+      <!-- 600 level nodes rendered per chapter by JS -->
     </div>
   </div>
 
@@ -942,11 +1182,10 @@ button {
       <div class="score-num" id="current-score">0</div>
     </div>
 
-    <!-- Companion Buddy Strip -->
-    <div class="buddy-companion">
-      <div class="companion-avatar" id="ingame-buddy-avatar"></div>
+    <!-- In-Game Status Strip -->
+    <div class="buddy-companion" style="justify-content:center; gap:14px;">
+      <div style="font-weight: 800; font-size: 0.95rem; color: #ff0054;" id="ingame-level-title">Level 1</div>
       <div class="combo-speech" id="combo-speech">Let's match!</div>
-      <div style="font-weight: 800; font-size: 0.85rem; color: #ff0054;" id="ingame-level-title">Level 1</div>
     </div>
 
     <!-- Board Grid -->
@@ -998,7 +1237,7 @@ button {
   <div class="modal-overlay" id="win-modal">
     <div class="modal-card">
       <div class="modal-title" style="color:#38b000;">Level Cleared!</div>
-      <div id="win-buddy-avatar" style="width:80px; height:80px; margin:0 auto 10px;"></div>
+      <div style="font-size:54px; line-height:1; margin:0 auto 10px;">🏆</div>
       <div style="display:flex; justify-content:center; gap:8px; margin-bottom:14px;" id="win-stars">
         <!-- 3 stars -->
       </div>
@@ -1019,8 +1258,8 @@ button {
   <div class="modal-overlay" id="fail-modal">
     <div class="modal-card">
       <div class="modal-title" style="color:#d90429;">Out of Moves!</div>
-      <div id="fail-buddy-avatar" style="width:80px; height:80px; margin:0 auto 10px;"></div>
-      <p style="font-weight:700; color:#555; margin-bottom:16px;">Don't give up! Try again to help your buddy!</p>
+      <div style="font-size:54px; line-height:1; margin:0 auto 10px;">💔</div>
+      <p style="font-weight:700; color:#555; margin-bottom:16px;">Don't give up! Try again to solve this level!</p>
       <div style="display:flex; flex-direction:column; gap:10px;">
         <button class="btn btn-yellow" id="fail-retry-btn">RETRY LEVEL</button>
         <button class="btn btn-blue" id="fail-map-btn">LEVEL MAP</button>
@@ -1772,12 +2011,29 @@ const INGREDIENTS = {
 };
 
 
-// --- 4. 30 BALANCED & INTERESTING LEVELS ---
-const LEVELS = [];
-for (let lvl = 1; lvl <= 30; lvl++) {
+// --- 4. 600 BALANCED & PROCEDURALLY DESIGNED LEVELS ---
+const TOTAL_LEVELS = 600;
+const CHAPTER_SIZE = 20;
+const TOTAL_CHAPTERS = 30; // 30 Chapters * 20 Levels = 600 Levels
+const CHAPTER_NAMES = [
+  "Strawberry Meadow", "Tangerine Grove", "Lemon Coast", "Mint Garden",
+  "Blueberry Bay", "Grape Castle", "Marshmallow Peak", "Caramel Creek",
+  "Cotton Candy Clouds", "Cookie Canyon", "Donut Dunes", "Gummy Glade",
+  "Waffle Woods", "Honey Valley", "Jelly Jungle", "Chocolate Falls",
+  "Truffle Trail", "Macaron Mountain", "Lollipop Lagoon", "Cupcake Cove",
+  "Pudding Plains", "Soda Springs", "Candy Cane Ridge", "Peppermint Park",
+  "Sugarplum Forest", "Toffee Tower", "Butterscotch Beach", "Bubblegum Basin",
+  "Fudge Fortress", "Royal Sugar Crown"
+];
+
+function getLevelData(lvl) {
+  const episode = Math.min(TOTAL_CHAPTERS, Math.floor((lvl - 1) / CHAPTER_SIZE) + 1);
+  const inEpisode = (lvl - 1) % CHAPTER_SIZE + 1;
+  let moves = Math.max(16, 28 - Math.floor(inEpisode / 5) - Math.floor(episode / 10));
+  if (inEpisode === 20) moves += 3; // milestone bonus
+
   let goalType = 'score';
-  let targetScore = 2000 + lvl * 800;
-  let moves = Math.max(16, 28 - Math.floor(lvl / 4));
+  let targetScore = 2000 + lvl * 220;
   let colorTargets = null;
   let jellyCount = 0;
   let ingredients = 0;
@@ -1785,43 +2041,49 @@ for (let lvl = 1; lvl <= 30; lvl++) {
   let hasIce = false;
   let hasStone = false;
 
-  if (lvl <= 4) {
+  const cycle = (lvl % 5);
+  if (lvl <= 3) {
     goalType = 'score';
-  } else if (lvl <= 8) {
+  } else if (cycle === 1) {
     goalType = 'color';
-    colorTargets = { colorId: (lvl % 6), needed: 15 + lvl * 2, collected: 0 };
-  } else if (lvl <= 14) {
+    const needed = Math.min(45, 18 + Math.floor(lvl / 20) * 2);
+    colorTargets = { colorId: (lvl % 6), needed, collected: 0 };
+    if (lvl > 30) hasIce = (lvl % 2 === 0);
+    if (lvl > 80) hasChocolate = (lvl % 3 === 0);
+  } else if (cycle === 2) {
     goalType = 'jelly';
-    jellyCount = 10 + (lvl - 8) * 3;
-    if (lvl >= 12) hasIce = true;
-  } else if (lvl <= 20) {
+    jellyCount = Math.min(32, 10 + Math.floor(lvl / 25) * 2 + (inEpisode % 5));
+    if (lvl > 40) hasIce = true;
+    if (lvl > 90) hasChocolate = (lvl % 2 === 0);
+    if (lvl > 140) hasStone = (lvl % 3 === 0);
+  } else if (cycle === 3) {
     goalType = 'ingredient';
-    ingredients = 2 + Math.floor((lvl - 14) / 3);
-    hasStone = true;
-    if (lvl >= 18) hasChocolate = true;
+    ingredients = Math.min(5, 2 + Math.floor(lvl / 150));
+    hasStone = (lvl > 40);
+    if (lvl > 100) hasChocolate = true;
+  } else if (cycle === 4) {
+    goalType = 'score';
+    targetScore = Math.floor(targetScore * 1.3);
+    if (lvl > 60) hasIce = true;
+    if (lvl > 120) hasStone = true;
   } else {
-    // 21 - 30: Multi-obstacle Master Levels
-    const mod = lvl % 3;
-    if (mod === 0) {
-      goalType = 'jelly';
-      jellyCount = 20 + (lvl - 20) * 2;
-      hasChocolate = true;
-      hasIce = true;
-    } else if (mod === 1) {
-      goalType = 'ingredient';
-      ingredients = 3;
-      hasStone = true;
-      hasChocolate = true;
+    // Boss / milestone level
+    goalType = (lvl % 2 === 0) ? 'jelly' : 'ingredient';
+    if (goalType === 'jelly') {
+      jellyCount = Math.min(36, 16 + Math.floor(lvl / 30) * 2);
     } else {
-      goalType = 'color';
-      colorTargets = { colorId: (lvl % 6), needed: 30, collected: 0 };
-      hasIce = true;
-      hasStone = true;
+      ingredients = Math.min(4, 2 + Math.floor(lvl / 180));
     }
+    hasChocolate = (lvl > 70);
+    hasIce = (lvl > 40);
+    hasStone = (lvl > 90);
+    targetScore = Math.floor(targetScore * 1.4);
   }
 
-  LEVELS.push({
+  return {
     levelNum: lvl,
+    episode,
+    episodeName: CHAPTER_NAMES[episode - 1] || `Chapter ${episode}`,
     goalType,
     targetScore,
     moves,
@@ -1832,7 +2094,12 @@ for (let lvl = 1; lvl <= 30; lvl++) {
     hasIce,
     hasStone,
     starThresholds: [targetScore * 0.5, targetScore * 0.8, targetScore * 1.2]
-  });
+  };
+}
+
+const LEVELS = [];
+for (let lvl = 1; lvl <= TOTAL_LEVELS; lvl++) {
+  LEVELS.push(getLevelData(lvl));
 }
 
 
@@ -1861,13 +2128,92 @@ class GameEngine {
     this.ingredientsCollected = 0;
     this.colorCollected = 0;
 
+    // Game Mode & Timers
+    this.gameMode = 'campaign'; // 'campaign', 'practice', 'challenge'
+    this.challengeTimer = null;
+    this.timeLeft = 0;
+
     // Touch / Drag handling
     this.touchStartX = 0;
     this.touchStartY = 0;
     this.touchStartCell = null;
   }
 
+  startPracticeMode() {
+    this.stopChallengeTimer();
+    this.gameMode = 'practice';
+    const practiceLevel = {
+      levelNum: 'Zen',
+      moves: 9999,
+      goalType: 'zen',
+      targetScore: 999999,
+      starThresholds: [2000, 5000, 10000],
+      jellyCount: 0,
+      hasChocolate: false,
+      hasIce: false,
+      hasStone: false,
+      ingredients: 0
+    };
+    this.startLevel(practiceLevel);
+    triggerComboBanner("ZEN PRACTICE MODE!");
+  }
+
+  startChallengeMode() {
+    this.stopChallengeTimer();
+    this.gameMode = 'challenge';
+    this.timeLeft = 60;
+    const challengeLevel = {
+      levelNum: 'Rush',
+      moves: 9999,
+      goalType: 'challenge',
+      targetScore: 25000,
+      starThresholds: [5000, 15000, 30000],
+      jellyCount: 0,
+      hasChocolate: false,
+      hasIce: false,
+      hasStone: false,
+      ingredients: 0
+    };
+    this.startLevel(challengeLevel);
+    triggerComboBanner("SWEET RUSH: 60 SECONDS!");
+
+    this.challengeTimer = setInterval(() => {
+      this.timeLeft--;
+      updateHUD();
+      if (this.timeLeft <= 5 && this.timeLeft > 0) {
+        audio.playLowMovesTick();
+      }
+      if (this.timeLeft <= 0) {
+        this.endChallenge();
+      }
+    }, 1000);
+  }
+
+  stopChallengeTimer() {
+    if (this.challengeTimer) {
+      clearInterval(this.challengeTimer);
+      this.challengeTimer = null;
+    }
+  }
+
+  endChallenge() {
+    this.stopChallengeTimer();
+    this.isAnimating = true;
+    audio.playWin();
+    triggerComboBanner("TIME'S UP! GREAT RUN!");
+    const coinsEarned = Math.max(30, Math.floor(this.score / 250));
+    saveLeaderboardScore(this.score, 'Rush');
+    setPlayerCoins(getPlayerCoins() + coinsEarned);
+    setTimeout(() => {
+      showWinModal(this.stars, this.score, coinsEarned);
+    }, 800);
+  }
+
   startLevel(levelData) {
+    if (this.gameMode !== 'practice' && this.gameMode !== 'challenge') {
+      this.gameMode = 'campaign';
+      this.stopChallengeTimer();
+    }
     this.currentLevel = levelData;
     this.movesLeft = levelData.moves;
     this.score = 0;
@@ -2303,6 +2649,10 @@ class GameEngine {
     this.comboCount++;
     audio.playMatch(this.comboCount);
 
+    if (this.gameMode === 'challenge') {
+      this.timeLeft = Math.min(99, this.timeLeft + 1);
+    }
+
     // Dynamic combo comments from companion buddy
     const speech = document.getElementById('combo-speech');
     if (this.comboCount === 2) {
@@ -2527,6 +2877,20 @@ class GameEngine {
       this.spreadChocolate();
     }
 
+    // Practice / Zen mode never fails or ends
+    if (this.gameMode === 'practice') {
+      this.isAnimating = false;
+      this.resetIdleTimer();
+      return;
+    }
+
+    // Challenge mode is time-based, handled by challengeTimer
+    if (this.gameMode === 'challenge') {
+      this.isAnimating = false;
+      this.resetIdleTimer();
+      return;
+    }
+
     // Check Win / Loss condition
     if (this.checkWinCondition()) {
       this.triggerWin();
@@ -2613,6 +2977,10 @@ class GameEngine {
   }
 
   consumeMove() {
+    if (this.gameMode === 'practice' || this.gameMode === 'challenge') {
+      updateHUD();
+      return;
+    }
     this.movesLeft--;
     if (this.movesLeft <= 3 && this.movesLeft > 0) {
       audio.playLowMovesTick();
@@ -2661,6 +3029,10 @@ class GameEngine {
   triggerFail() {
     this.isAnimating = true;
     audio.playFail();
+    const currentLives = getPlayerLives();
+    if (currentLives > 0) {
+      setPlayerLives(currentLives - 1);
+    }
     showFailModal();
   }
 
@@ -2770,6 +3142,45 @@ function setSelectedBuddyId(id) {
   renderSelectedBuddy();
 }
 
+// --- Lives System ---
+function getPlayerLives() {
+  const maxLives = 5;
+  const savedLives = localStorage.getItem('candy_lives');
+  const lastRegen = parseInt(localStorage.getItem('candy_last_life_regen') || '0', 10);
+  let lives = savedLives !== null ? parseInt(savedLives, 10) : maxLives;
+  if (isNaN(lives)) lives = maxLives;
+
+  if (lives < maxLives && lastRegen > 0) {
+    const elapsedMinutes = (Date.now() - lastRegen) / (1000 * 60);
+    const regenAmount = Math.floor(elapsedMinutes / 15);
+    if (regenAmount > 0) {
+      lives = Math.min(maxLives, lives + regenAmount);
+      localStorage.setItem('candy_lives', lives.toString());
+      localStorage.setItem('candy_last_life_regen', (lastRegen + regenAmount * 15 * 60 * 1000).toString());
+    }
+  }
+  return lives;
+}
+
+function setPlayerLives(val) {
+  const lives = Math.max(0, Math.min(5, val));
+  localStorage.setItem('candy_lives', lives.toString());
+  if (lives < 5 && !localStorage.getItem('candy_last_life_regen')) {
+    localStorage.setItem('candy_last_life_regen', Date.now().toString());
+  }
+  updateLivesUI();
+}
+
+function updateLivesUI() {
+  const lives = getPlayerLives();
+  const menuLivesPill = document.getElementById('menu-lives-count');
+  if (menuLivesPill) menuLivesPill.innerText = `${lives}/5`;
+  const energyFill = document.getElementById('energy-fill');
+  if (energyFill) energyFill.style.width = `${(lives / 5) * 100}%`;
+  const energyLabel = document.getElementById('energy-label');
+  if (energyLabel) energyLabel.innerText = `${lives} / 5 LIVES`;
+}
+
 function getUnlockedLevel() {
   return parseInt(localStorage.getItem('candy_unlocked_level') || '1', 10);
 }
@@ -2796,13 +3207,13 @@ function saveLevelProgress(lvl, stars, score, coinsEarned) {
 
 function getLeaderboard() {
   const def = [
-    { name: "SugarQueen", score: 48200, level: 28 },
-    { name: "ChocoMaster", score: 39500, level: 24 },
-    { name: "BerryBlast", score: 31200, level: 19 },
-    { name: "MintyPaws", score: 25400, level: 15 },
-    { name: "HoneyBear", score: 18900, level: 11 },
-    { name: "SweetTooth", score: 14200, level: 8 },
-    { name: "JellyRoll", score: 11500, level: 6 }
+    { name: "SugarQueen", score: 985200, level: 594 },
+    { name: "ChocoMaster", score: 812400, level: 512 },
+    { name: "BerryBlast", score: 674500, level: 430 },
+    { name: "MintyPaws", score: 532100, level: 345 },
+    { name: "HoneyBear", score: 398600, level: 260 },
+    { name: "SweetTooth", score: 245300, level: 168 },
+    { name: "JellyRoll", score: 115200, level: 85 }
   ];
   try {
     return JSON.parse(localStorage.getItem('candy_leaderboard')) || def;
@@ -2937,19 +3348,49 @@ function renderBoard() {
 function updateHUD() {
   if (!game.currentLevel) return;
 
-  // Moves
+  // Moves / Timer display
   const movesEl = document.getElementById('moves-left');
   const movesWrap = document.getElementById('hud-moves-wrap');
-  movesEl.innerText = game.movesLeft;
-  if (game.movesLeft <= 3) movesWrap.classList.add('low-moves');
-  else movesWrap.classList.remove('low-moves');
+  const movesLabel = movesWrap.querySelector('.hud-label');
+
+  if (game.gameMode === 'practice') {
+    movesEl.innerText = '∞';
+    if (movesLabel) movesLabel.innerText = 'MOVES';
+    movesWrap.classList.remove('low-moves');
+  } else if (game.gameMode === 'challenge') {
+    movesEl.innerText = `${game.timeLeft}s`;
+    if (movesLabel) movesLabel.innerText = 'TIME';
+    if (game.timeLeft <= 10) movesWrap.classList.add('low-moves');
+    else movesWrap.classList.remove('low-moves');
+  } else {
+    movesEl.innerText = game.movesLeft;
+    if (movesLabel) movesLabel.innerText = 'MOVES';
+    if (game.movesLeft <= 3) movesWrap.classList.add('low-moves');
+    else movesWrap.classList.remove('low-moves');
+  }
 
   // Goals
   const goalsContainer = document.getElementById('hud-goals');
   goalsContainer.innerHTML = '';
   const g = game.currentLevel;
 
-  if (g.goalType === 'score') {
+  if (game.gameMode === 'practice') {
+    const item = document.createElement('div');
+    item.className = 'goal-item';
+    item.innerHTML = `
+      <div class="goal-icon-wrap" style="font-size:22px; display:flex; align-items:center; justify-content:center;">🧘</div>
+      <span class="goal-count">Zen Play</span>
+    `;
+    goalsContainer.appendChild(item);
+  } else if (game.gameMode === 'challenge') {
+    const item = document.createElement('div');
+    item.className = 'goal-item';
+    item.innerHTML = `
+      <div class="goal-icon-wrap" style="font-size:22px; display:flex; align-items:center; justify-content:center;">⚡</div>
+      <span class="goal-count">Sweet Rush</span>
+    `;
+    goalsContainer.appendChild(item);
+  } else if (g.goalType === 'score') {
     const item = document.createElement('div');
     item.className = 'goal-item';
     item.innerHTML = `
@@ -3008,7 +3449,13 @@ function updateHUD() {
   }
 
   // Level Title
-  document.getElementById('ingame-level-title').innerText = `Level ${g.levelNum}`;
+  if (game.gameMode === 'practice') {
+    document.getElementById('ingame-level-title').innerText = 'Zen Practice';
+  } else if (game.gameMode === 'challenge') {
+    document.getElementById('ingame-level-title').innerText = 'Sweet Rush';
+  } else {
+    document.getElementById('ingame-level-title').innerText = `Level ${g.levelNum}`;
+  }
 
   // Boosters Count
   const boosters = getPlayerBoosters();
@@ -3123,10 +3570,14 @@ requestAnimationFrame(updateParticles);
 // --- 10. MODALS & SCREEN ROUTING ---
 function showScreen(screenId) {
   audio.playWhoosh();
+  if (screenId !== 'game-screen') {
+    game.stopChallengeTimer();
+  }
   document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
   document.getElementById(screenId).classList.add('active');
 
   if (screenId === 'main-menu') {
+    updateLivesUI();
     audio.startMusic('menu');
   } else if (screenId === 'game-screen') {
     audio.startMusic('game');
@@ -3157,6 +3608,11 @@ function showPreLevelModal(levelNum) {
 
   document.getElementById('prelevel-modal').classList.add('active');
   document.getElementById('prelevel-start-btn').onclick = () => {
+    // If player has 0 lives, give a quick free replenish so they are never blocked
+    if (getPlayerLives() <= 0) {
+      setPlayerLives(5);
+      triggerComboBanner("LIVES RESTORED! ❤️");
+    }
     document.getElementById('prelevel-modal').classList.remove('active');
     showScreen('game-screen');
     game.startLevel(level);
@@ -3188,22 +3644,81 @@ function showFailModal() {
 }
 
 
-// --- 11. LEVEL MAP BUILDER ---
-function buildLevelMap() {
+// --- 11. LEVEL MAP BUILDER (600 LEVELS / 30 CHAPTERS) ---
+let currentMapChapter = 1;
+
+function calculateTotalStars() {
+  let count = 0;
+  for (let l = 1; l <= TOTAL_LEVELS; l++) {
+    count += getLevelStars(l);
+  }
+  return count;
+}
+
+function buildLevelMap(targetChapter = null) {
   const container = document.getElementById('map-scroll-area');
   const unlocked = getUnlockedLevel();
+  const unlockedChapter = Math.min(TOTAL_CHAPTERS, Math.floor((unlocked - 1) / CHAPTER_SIZE) + 1);
+
+  if (targetChapter === null) {
+    currentMapChapter = unlockedChapter;
+  } else {
+    currentMapChapter = Math.max(1, Math.min(TOTAL_CHAPTERS, targetChapter));
+  }
+
+  // Update Total Stars in header
+  const totalStars = calculateTotalStars();
+  const starsEl = document.getElementById('map-total-stars');
+  if (starsEl) starsEl.innerText = `⭐ ${totalStars} / ${TOTAL_LEVELS * 3}`;
+
+  // Update Chapter Navigation
+  const chapterNameEl = document.getElementById('map-chapter-name');
+  const chapterRangeEl = document.getElementById('map-chapter-range');
+  const prevBtn = document.getElementById('map-prev-chapter-btn');
+  const nextBtn = document.getElementById('map-next-chapter-btn');
+
+  const startLevel = (currentMapChapter - 1) * CHAPTER_SIZE + 1;
+  const endLevel = Math.min(TOTAL_LEVELS, currentMapChapter * CHAPTER_SIZE);
+
+  if (chapterNameEl) {
+    chapterNameEl.innerText = `Chapter ${currentMapChapter}: ${CHAPTER_NAMES[currentMapChapter - 1]}`;
+  }
+  if (chapterRangeEl) {
+    chapterRangeEl.innerText = `Levels ${startLevel} - ${endLevel}`;
+  }
+  if (prevBtn) prevBtn.disabled = (currentMapChapter <= 1);
+  if (nextBtn) nextBtn.disabled = (currentMapChapter >= TOTAL_CHAPTERS);
 
   // Clear previous nodes except path svg
   const svg = document.getElementById('map-path-svg');
   container.innerHTML = '';
   container.appendChild(svg);
 
-  for (let lvl = 1; lvl <= 30; lvl++) {
+  // Bottom Portal to Previous Chapter (if not chapter 1)
+  if (currentMapChapter > 1) {
+    const prevPortal = document.createElement('div');
+    prevPortal.className = 'chapter-portal-node';
+    prevPortal.innerHTML = `
+      <button class="chapter-portal-btn">
+        ◀ Previous: Chapter ${currentMapChapter - 1}
+      </button>
+    `;
+    prevPortal.querySelector('button').onclick = () => {
+      audio.playClick();
+      buildLevelMap(currentMapChapter - 1);
+    };
+    container.appendChild(prevPortal);
+  }
+
+  let activeNodeToScroll = null;
+
+  for (let lvl = startLevel; lvl <= endLevel; lvl++) {
     const node = document.createElement('div');
     node.className = 'map-level-node';
+    node.dataset.level = lvl;
 
     // Alternating winding curve
-    const xOffset = Math.sin(lvl * 0.8) * 80;
+    const xOffset = Math.sin((lvl - startLevel) * 0.85) * 85;
     node.style.transform = `translateX(${xOffset}px)`;
 
     const btn = document.createElement('button');
@@ -3214,6 +3729,7 @@ function buildLevelMap() {
       btn.classList.add('level-unlocked');
     } else if (lvl === unlocked) {
       btn.classList.add('level-current');
+      activeNodeToScroll = node;
     } else {
       btn.classList.add('level-locked');
     }
@@ -3237,6 +3753,31 @@ function buildLevelMap() {
     node.appendChild(starRow);
     container.appendChild(node);
   }
+
+  // Top Portal to Next Chapter (if not chapter 30)
+  if (currentMapChapter < TOTAL_CHAPTERS) {
+    const nextPortal = document.createElement('div');
+    nextPortal.className = 'chapter-portal-node';
+    nextPortal.innerHTML = `
+      <button class="chapter-portal-btn">
+        Next: Chapter ${currentMapChapter + 1} ▶
+      </button>
+    `;
+    nextPortal.querySelector('button').onclick = () => {
+      audio.playClick();
+      buildLevelMap(currentMapChapter + 1);
+    };
+    container.appendChild(nextPortal);
+  }
+
+  // Smoothly scroll to the current unlocked level if present in this chapter
+  setTimeout(() => {
+    if (activeNodeToScroll) {
+      activeNodeToScroll.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    } else {
+      container.scrollTop = container.scrollHeight;
+    }
+  }, 50);
 }
 
 
@@ -3323,39 +3864,121 @@ window.addEventListener('touchmove', onPointerMove, { passive: false });
 window.addEventListener('touchend', onPointerEnd);
 
 
+function openLeaderboardModal() {
+  audio.playClick();
+  const listEl = document.getElementById('leaderboard-list');
+  listEl.innerHTML = '';
+  const board = getLeaderboard();
+  board.forEach((item, idx) => {
+    const row = document.createElement('div');
+    row.className = 'leaderboard-item';
+    row.innerHTML = `
+      <div>
+        <span class="rank-badge rank-${idx+1}">#${idx+1}</span>
+        <span style="font-weight:800;">${item.name}</span>
+        <span style="font-size:0.75rem; color:#888; margin-left:6px;">(${typeof item.level === 'number' ? 'Lvl ' + item.level : item.level})</span>
+      </div>
+      <span style="color:#d48b00; font-weight:800;">${item.score.toLocaleString()}</span>
+    `;
+    listEl.appendChild(row);
+  });
+  document.getElementById('leaderboard-modal').classList.add('active');
+}
+
 // --- 13. UI EVENT LISTENERS & INITIALIZATION ---
 function initApp() {
-  // Populate Companion Buddy Picker
+  // Populate Companion Buddy Picker if present
   const picker = document.getElementById('buddy-picker');
-  picker.innerHTML = '';
-  const currentBuddy = getSelectedBuddyId();
-
-  BUDDIES.forEach(buddy => {
-    const card = document.createElement('div');
-    card.className = `buddy-select-card ${buddy.id === currentBuddy ? 'active' : ''}`;
-    card.innerHTML = buddy.svg('idle');
-    card.title = buddy.name;
-    card.onclick = () => {
-      audio.playTap();
-      document.querySelectorAll('.buddy-select-card').forEach(c => c.classList.remove('active'));
-      card.classList.add('active');
-      setSelectedBuddyId(buddy.id);
-    };
-    picker.appendChild(card);
-  });
+  if (picker) {
+    picker.innerHTML = '';
+    const currentBuddy = getSelectedBuddyId();
+    BUDDIES.forEach(buddy => {
+      const card = document.createElement('div');
+      card.className = `buddy-select-card ${buddy.id === currentBuddy ? 'active' : ''}`;
+      card.innerHTML = buddy.svg('idle');
+      card.title = buddy.name;
+      card.onclick = () => {
+        audio.playTap();
+        document.querySelectorAll('.buddy-select-card').forEach(c => c.classList.remove('active'));
+        card.classList.add('active');
+        setSelectedBuddyId(buddy.id);
+      };
+      picker.appendChild(card);
+    });
+  }
 
   renderSelectedBuddy();
   setPlayerCoins(getPlayerCoins());
+  updateLivesUI();
 
-  // Menu Buttons
-  document.getElementById('play-button').onclick = () => {
+  // 4 Stone Menu Action Buttons from reference design
+  const startBtn = document.getElementById('btn-menu-start');
+  if (startBtn) {
+    startBtn.onclick = () => {
+      audio.playClick();
+      buildLevelMap();
+      showScreen('level-map-screen');
+    };
+  }
+  const practiceBtn = document.getElementById('btn-menu-practice');
+  if (practiceBtn) {
+    practiceBtn.onclick = () => {
+      audio.playClick();
+      showScreen('game-screen');
+      game.startPracticeMode();
+    };
+  }
+  const challengeBtn = document.getElementById('btn-menu-challenge');
+  if (challengeBtn) {
+    challengeBtn.onclick = () => {
+      audio.playClick();
+      showScreen('game-screen');
+      game.startChallengeMode();
+    };
+  }
+  const competeBtn = document.getElementById('btn-menu-compete');
+  if (competeBtn) {
+    competeBtn.onclick = () => {
+      openLeaderboardModal();
+    };
+  }
+
+  // Lives / Energy Bar interactives
+  const onLivesClick = () => {
     audio.playClick();
-    buildLevelMap();
-    showScreen('level-map-screen');
+    const lives = getPlayerLives();
+    if (lives < 5) {
+      setPlayerLives(5);
+      audio.playFanfare(1);
+      triggerComboBanner("LIVES FULLY RECHARGED! ❤️");
+    } else {
+      audio.playTap();
+      triggerComboBanner("LIVES FULL (5/5) ❤️");
+    }
   };
+  const bottomLives = document.getElementById('bottom-lives-wrap');
+  if (bottomLives) bottomLives.onclick = onLivesClick;
+  const livesPill = document.getElementById('lives-pill');
+  if (livesPill) livesPill.onclick = onLivesClick;
+
+  // Map Navigation Buttons
   document.getElementById('map-back-btn').onclick = () => {
     audio.playClick();
     showScreen('main-menu');
+  };
+  document.getElementById('map-prev-chapter-btn').onclick = () => {
+    audio.playClick();
+    buildLevelMap(currentMapChapter - 1);
+  };
+  document.getElementById('map-next-chapter-btn').onclick = () => {
+    audio.playClick();
+    buildLevelMap(currentMapChapter + 1);
+  };
+  document.getElementById('map-jump-btn').onclick = () => {
+    audio.playClick();
+    const unlocked = getUnlockedLevel();
+    const targetChapter = Math.min(TOTAL_CHAPTERS, Math.floor((unlocked - 1) / CHAPTER_SIZE) + 1);
+    buildLevelMap(targetChapter);
   };
 
   // Booster Buttons
@@ -3416,7 +4039,7 @@ function initApp() {
     audio.playClick();
     document.getElementById('win-modal').classList.remove('active');
     const nextLvl = game.currentLevel.levelNum + 1;
-    if (nextLvl <= 30) {
+    if (nextLvl <= TOTAL_LEVELS) {
       showPreLevelModal(nextLvl);
     } else {
       buildLevelMap();
@@ -3471,26 +4094,8 @@ function initApp() {
   musicVol.oninput = () => { audio.musicVolume = parseFloat(musicVol.value); };
 
   // Leaderboard Modal
-  document.getElementById('leaderboard-button').onclick = () => {
-    audio.playClick();
-    const listEl = document.getElementById('leaderboard-list');
-    listEl.innerHTML = '';
-    const board = getLeaderboard();
-    board.forEach((item, idx) => {
-      const row = document.createElement('div');
-      row.className = 'leaderboard-item';
-      row.innerHTML = `
-        <div>
-          <span class="rank-badge rank-${idx+1}">#${idx+1}</span>
-          <span>${item.name}</span>
-          <span style="font-size:0.75rem; color:#888; margin-left:6px;">(Lvl ${item.level})</span>
-        </div>
-        <span style="color:#d48b00;">${item.score.toLocaleString()}</span>
-      `;
-      listEl.appendChild(row);
-    });
-    document.getElementById('leaderboard-modal').classList.add('active');
-  };
+  const lbBtn = document.getElementById('leaderboard-button');
+  if (lbBtn) lbBtn.onclick = openLeaderboardModal;
   document.getElementById('close-leaderboard-btn').onclick = () => {
     audio.playClick();
     document.getElementById('leaderboard-modal').classList.remove('active');
